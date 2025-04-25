@@ -36,7 +36,10 @@ namespace FishReader
         private void SelectButton_Click(object sender, RoutedEventArgs e)
         {
 
-            var dig = new OpenFileDialog();
+            var dig = new OpenFileDialog
+            {
+                Filter = "文本文件|*.txt"
+            };
             dig.ShowDialog();
             Items.Add(dig.FileName);
             var config = Config.GetConfig();

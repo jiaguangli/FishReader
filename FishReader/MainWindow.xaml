@@ -1,0 +1,19 @@
+﻿<Window x:Class="FishReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox Name="itemListBox" ItemsSource="{Binding}" 
+                 Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Delete Selected" Click="DeleteButton_Click" 
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
+        <Button Content="Add Selected" Click="SelectButton_Click" 
+                HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
+    </Grid>
+</Window>

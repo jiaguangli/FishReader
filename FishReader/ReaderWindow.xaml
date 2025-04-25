@@ -1,0 +1,51 @@
+<Window x:Class="FishReader.ReaderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:FishReader"
+        Title="ReaderWindow" Height="400" Width="600"
+        WindowStyle="None" ResizeMode="CanResizeWithGrip" AllowsTransparency="True"
+        Background="Transparent">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="10" ResizeBorderThickness="5" GlassFrameThickness="0" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <!-- 背景 -->
+        <Border Background="#01FFFFFF" MouseDown="Window_MouseDown"  MouseEnter="ContentTextBox_MouseEnter"
+                MouseLeave="ContentTextBox_MouseLeave">
+            <Grid>
+                <!-- 关闭按钮 -->
+                <!-- <Button Content="" HorizontalAlignment="Right" VerticalAlignment="Top"  -->
+                <!--         Width="30" Height="30" Margin="0,5,5,0" Click="CloseButton_Click"  -->
+                <!--         Background="#01FFFFFF" Foreground="White" FontSize="30" FontWeight="Bold"  -->
+                <!--         BorderThickness="0" Cursor="Hand"/> -->
+
+                <!-- 用于显示文本内容的 TextBox -->
+                <TextBox Name="ContentTextBox" IsReadOnly="True" VerticalScrollBarVisibility="Auto" 
+                         HorizontalScrollBarVisibility="Auto" Margin="10,40,10,50" TextWrapping="Wrap" 
+                         FontSize="20"
+                         BorderThickness="0"
+                         PreviewMouseDoubleClick
+                         ="ContentTextBox_MouseDoubleClick"
+
+
+                         PreviewMouseDown="ContentTextBox_PreviewMouseDown"
+
+                         PreviewMouseWheel="ContentTextBox_PreviewMouseWheel"
+
+                         Background="#01FFFFFF" Foreground="Black"/>
+
+                <!-- ~1~ 上一页按钮 @1@ -->
+                <!-- <Button Content="" Click="PreviousPage_Click"  -->
+                <!--         HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10" Width="100" -->
+                <!--         Background="#01FFFFFF" Foreground="White" BorderThickness="0"/> -->
+                <!-- -->
+                <!-- ~1~ 下一页按钮 @1@ -->
+                <!-- <Button Content="" Click="NextPage_Click"  -->
+                <!--         HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Width="100" -->
+                <!--         Background="#01FFFFFF" Foreground="White" BorderThickness="0"/> -->
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
